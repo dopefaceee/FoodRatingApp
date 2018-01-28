@@ -29,7 +29,7 @@ class FrameViewController: UIViewController {
     }
     
     @IBAction func ImageFrame1(_ sender: Any) {
-        
+        print("Item 1 is selected")
     }
     
 }

@@ -13,9 +13,12 @@
 		1309F80C201E0CA500D03A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1309F80B201E0CA500D03A41 /* Assets.xcassets */; };
 		1309F80F201E0CA500D03A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1309F80D201E0CA500D03A41 /* LaunchScreen.storyboard */; };
 		1309F817201E289A00D03A41 /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1309F816201E289A00D03A41 /* FrameViewController.swift */; };
+		13BC6BE22020E62D00A0D085 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC6BE12020E62D00A0D085 /* HomeViewController.swift */; };
+		BDC9E0AB7432C2BDD6368AE0 /* Pods_Nyam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17860E63AC77A92BFC3BC30E /* Pods_Nyam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2FFD46C4741A4C1614D415 /* Pods-Nyam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nyam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nyam/Pods-Nyam.release.xcconfig"; sourceTree = "<group>"; };
 		1309F801201E0CA500D03A41 /* Nyam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nyam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1309F804201E0CA500D03A41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1309F806201E0CA500D03A41 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		1309F80E201E0CA500D03A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1309F810201E0CA500D03A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1309F816201E289A00D03A41 /* FrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
+		13BC6BE12020E62D00A0D085 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		17860E63AC77A92BFC3BC30E /* Pods_Nyam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nyam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D590980CF110925C028A59 /* Pods-Nyam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nyam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nyam/Pods-Nyam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC9E0AB7432C2BDD6368AE0 /* Pods_Nyam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				1309F803201E0CA500D03A41 /* Nyam */,
 				1309F802201E0CA500D03A41 /* Products */,
+				E1DAEDB1A4AD067E0C46D19B /* Pods */,
+				F266E4798CB5C19BADB73387 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +80,26 @@
 			children = (
 				1309F816201E289A00D03A41 /* FrameViewController.swift */,
 				1309F806201E0CA500D03A41 /* CaptureViewController.swift */,
+				13BC6BE12020E62D00A0D085 /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1DAEDB1A4AD067E0C46D19B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29D590980CF110925C028A59 /* Pods-Nyam.debug.xcconfig */,
+				0B2FFD46C4741A4C1614D415 /* Pods-Nyam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F266E4798CB5C19BADB73387 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17860E63AC77A92BFC3BC30E /* Pods_Nyam.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1309F813201E0CA500D03A41 /* Build configuration list for PBXNativeTarget "Nyam" */;
 			buildPhases = (
+				CC3DAEF139B2662541E8094F /* [CP] Check Pods Manifest.lock */,
 				1309F7FD201E0CA500D03A41 /* Sources */,
 				1309F7FE201E0CA500D03A41 /* Frameworks */,
 				1309F7FF201E0CA500D03A41 /* Resources */,
+				1FA0B7D0CBF98D3FCA1046FF /* [CP] Embed Pods Frameworks */,
+				E0E26466A013F82AA7FB982B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +172,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FA0B7D0CBF98D3FCA1046FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nyam/Pods-Nyam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nyam/Pods-Nyam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC3DAEF139B2662541E8094F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nyam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E26466A013F82AA7FB982B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nyam/Pods-Nyam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1309F7FD201E0CA500D03A41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -150,6 +234,7 @@
 				1309F817201E289A00D03A41 /* FrameViewController.swift in Sources */,
 				1309F807201E0CA500D03A41 /* CaptureViewController.swift in Sources */,
 				1309F805201E0CA500D03A41 /* AppDelegate.swift in Sources */,
+				13BC6BE22020E62D00A0D085 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +369,7 @@
 		};
 		1309F814201E0CA500D03A41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29D590980CF110925C028A59 /* Pods-Nyam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +386,7 @@
 		};
 		1309F815201E0CA500D03A41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B2FFD46C4741A4C1614D415 /* Pods-Nyam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

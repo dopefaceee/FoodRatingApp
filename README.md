@@ -7,4 +7,4 @@ Things to do :
 
 Screenshot :
 
-![alt tag](https://i.imgur.com/BkKSpoV.jpg)
+![alt tag](https://gfycat.com/ConstantCreativeAlaskankleekai)

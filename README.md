@@ -7,4 +7,4 @@ Things to do :
 
 Sneak Peek :
 
-![alt tag](https://media.giphy.com/media/l1KcQVgJyvF2z7MnS/giphy.gif)
+![alt tag](https://thumbs.gfycat.com/FlamboyantSadAmericanshorthair-size_restricted.gif)

@@ -12,7 +12,7 @@ import Fusuma
 
 class HomeViewController: UIViewController, FusumaDelegate {
     
-    
+     private var selectedImage: UIImage?
 
     @IBOutlet weak var editPhotoButton: UIButton! {
         didSet {
@@ -67,16 +67,27 @@ class HomeViewController: UIViewController, FusumaDelegate {
     }
     
     @IBAction func takePhotoForEditing(_ sender: Any) {
+        
         //show fusuma
         let fusuma = FusumaViewController()
         fusuma.delegate = self
         fusuma.allowMultipleSelection = false
+        
         //fusuma.availableModes = [.video]
+        
         fusumaSavesImage = true
         
         self.present(fusuma, animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "testBos" {
+            if let frameVC = segue.destination as? FrameViewController {
+                frameVC.newImage = selectedImage
+            }
+        }
+    }
     
     // MARK: Fusuma Delegate
     func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
@@ -92,6 +103,7 @@ class HomeViewController: UIViewController, FusumaDelegate {
         }
         
         //imageView.image = image CHANGE PLACEHOLDER IMAGE
+        selectedImage = image
         
         //for next vc
         self.performSegue(withIdentifier: "testBos", sender: nil)
@@ -154,6 +166,8 @@ class HomeViewController: UIViewController, FusumaDelegate {
             
             print("Called just after dismissed FusumaViewController")
         }
+        
+        
     }
     
     func fusumaCameraRollUnauthorized() {

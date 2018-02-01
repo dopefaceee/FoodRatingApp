@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1309F805201E0CA500D03A41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1309F804201E0CA500D03A41 /* AppDelegate.swift */; };
-		1309F807201E0CA500D03A41 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1309F806201E0CA500D03A41 /* CaptureViewController.swift */; };
 		1309F80A201E0CA500D03A41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1309F808201E0CA500D03A41 /* Main.storyboard */; };
 		1309F80C201E0CA500D03A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1309F80B201E0CA500D03A41 /* Assets.xcassets */; };
 		1309F80F201E0CA500D03A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1309F80D201E0CA500D03A41 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		0B2FFD46C4741A4C1614D415 /* Pods-Nyam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nyam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nyam/Pods-Nyam.release.xcconfig"; sourceTree = "<group>"; };
 		1309F801201E0CA500D03A41 /* Nyam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nyam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1309F804201E0CA500D03A41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1309F806201E0CA500D03A41 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		1309F809201E0CA500D03A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1309F80B201E0CA500D03A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1309F80E201E0CA500D03A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				1309F816201E289A00D03A41 /* FrameViewController.swift */,
-				1309F806201E0CA500D03A41 /* CaptureViewController.swift */,
 				13BC6BE12020E62D00A0D085 /* HomeViewController.swift */,
 			);
 			path = Controller;
@@ -234,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1309F817201E289A00D03A41 /* FrameViewController.swift in Sources */,
-				1309F807201E0CA500D03A41 /* CaptureViewController.swift in Sources */,
 				1309F805201E0CA500D03A41 /* AppDelegate.swift in Sources */,
 				13BC6BE22020E62D00A0D085 /* HomeViewController.swift in Sources */,
 			);

@@ -31,12 +31,13 @@ class HomeViewController: UIViewController, FusumaDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         self.navigationController?.navigationBar.isHidden = true
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewWillDisappear(true)
         self.navigationController?.navigationBar.isHidden = false
     }
     

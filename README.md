@@ -5,6 +5,6 @@ Things to do :
 - Add Frame Custom
 - Share SNS
 
-Screenshot :
+Sneak Peek :
 
-![alt tag](https://thumbs.gfycat.com/ConstantCreativeAlaskankleekai-size_restricted.gif)
+![alt tag](https://thumbs.gfycat.com/PiercingUniqueHairstreak-size_restricted.gif)

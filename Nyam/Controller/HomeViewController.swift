@@ -93,7 +93,7 @@ class HomeViewController: UIViewController, FusumaDelegate {
         
         //imageView.image = image CHANGE PLACEHOLDER IMAGE
         
-        //for next vc
+        //for next view controller
         self.performSegue(withIdentifier: "testBos", sender: nil)
     }
     

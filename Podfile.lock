@@ -1,15 +1,18 @@
 PODS:
+  - ASHorizontalScrollView (1.5.1)
   - Fusuma (1.2.4)
   - Pastel (0.3.0)
 
 DEPENDENCIES:
+  - ASHorizontalScrollView (~> 1.5.1)
   - Fusuma
   - Pastel
 
 SPEC CHECKSUMS:
+  ASHorizontalScrollView: 9c98b9226509540075b6398c92f68fb474bea7e9
   Fusuma: e85c394878a2e1549c67140ba7c038aff8d7581c
   Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
 
-PODFILE CHECKSUM: aa1db29e3440ecf9767a2705e693c17ad670a658
+PODFILE CHECKSUM: f6bea9c9ad334cc1e8dc4c97e934caad4e59de32
 
 COCOAPODS: 1.3.1

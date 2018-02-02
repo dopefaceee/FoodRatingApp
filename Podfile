@@ -8,5 +8,6 @@ target 'Nyam' do
   # Pods for Nyam
  pod 'Pastel'
  pod 'Fusuma'
+ pod 'ASHorizontalScrollView', '~> 1.5.1'
 
 end

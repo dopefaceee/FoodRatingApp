@@ -29,12 +29,43 @@
                                     <constraint firstAttribute="width" constant="375" id="lqT-GZ-Pnm"/>
                                 </constraints>
                             </imageView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXV-3Z-WCy">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="" image="blank-square" id="GxN-cN-Ekw" userLabel="Frame">
+                                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="location-pin" id="gNm-mb-TsB">
+                                        <inset key="imageInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="layers" id="Nvd-Ry-brs">
+                                        <inset key="imageInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="share" id="UV8-2h-vAa">
+                                        <inset key="imageInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                </items>
+                            </tabBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-bG-3vg">
+                                <rect key="frame" x="0.0" y="458" width="375" height="160"/>
+                                <color key="backgroundColor" white="0.86805555555555558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="gEJ-LV-smI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ugO-bG-3vg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AVq-AN-abw"/>
                             <constraint firstItem="RKe-UV-AnG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CnE-3o-LT4"/>
+                            <constraint firstItem="hXV-3Z-WCy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L35-3b-ni3"/>
+                            <constraint firstItem="hXV-3Z-WCy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OVN-ET-Gjs"/>
                             <constraint firstItem="RKe-UV-AnG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TeE-Qq-iR7"/>
+                            <constraint firstItem="hXV-3Z-WCy" firstAttribute="top" secondItem="ugO-bG-3vg" secondAttribute="bottom" id="iSw-2h-EKQ"/>
                             <constraint firstItem="RKe-UV-AnG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sdm-wz-FFA"/>
+                            <constraint firstItem="ugO-bG-3vg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="skl-BJ-2Z8"/>
+                            <constraint firstItem="hXV-3Z-WCy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yd2-T5-7gR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -43,6 +74,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageToEdit" destination="RKe-UV-AnG" id="2Mx-lC-VKM"/>
+                        <outlet property="tabBarEditor" destination="hXV-3Z-WCy" id="hJT-XW-yqE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,6 +165,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blank-square" width="46" height="46"/>
+        <image name="layers" width="46" height="46"/>
+        <image name="location-pin" width="46" height="46"/>
         <image name="nyamapplogo" width="175" height="52"/>
+        <image name="share" width="46" height="46"/>
     </resources>
 </document>

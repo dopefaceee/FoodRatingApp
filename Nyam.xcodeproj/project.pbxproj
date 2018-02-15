@@ -63,6 +63,7 @@
 		1309F803201E0CA500D03A41 /* Nyam */ = {
 			isa = PBXGroup;
 			children = (
+				13DEAFBE203547DE000F953C /* View */,
 				1309F818201E2E9600D03A41 /* Controller */,
 				1309F804201E0CA500D03A41 /* AppDelegate.swift */,
 				1309F808201E0CA500D03A41 /* Main.storyboard */,
@@ -80,6 +81,13 @@
 				13BC6BE12020E62D00A0D085 /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		13DEAFBE203547DE000F953C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E1DAEDB1A4AD067E0C46D19B /* Pods */ = {

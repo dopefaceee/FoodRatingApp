@@ -11,12 +11,16 @@ import UIKit
 class FrameViewController: UIViewController {
     
     @IBOutlet weak var imageToEdit: UIImageView!
+    
+    @IBOutlet weak var tabBarEditor: UITabBar!
    
     var newImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageToEdit.image = newImage
+        
+        tabBarEditor.delegate = self
         
     }
     
@@ -28,6 +32,16 @@ class FrameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return false
     }
+    
+    
+}
+
+extension FrameViewController: UITabBarDelegate {
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        
+    }
+    
     
     
 }

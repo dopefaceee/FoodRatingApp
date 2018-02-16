@@ -22,50 +22,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RKe-UV-AnG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQj-yG-LSP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="404"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-photo" translatesAutoresizingMaskIntoConstraints="NO" id="RKe-UV-AnG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="404"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Mu3-ef-rTM"/>
-                                    <constraint firstAttribute="width" constant="375" id="lqT-GZ-Pnm"/>
+                                    <constraint firstAttribute="bottom" secondItem="RKe-UV-AnG" secondAttribute="bottom" id="GZ7-ST-bc6"/>
+                                    <constraint firstItem="RKe-UV-AnG" firstAttribute="leading" secondItem="ZQj-yG-LSP" secondAttribute="leading" id="QYo-fm-ZOd"/>
+                                    <constraint firstItem="RKe-UV-AnG" firstAttribute="top" secondItem="ZQj-yG-LSP" secondAttribute="top" id="Uqx-Qe-Hp7"/>
+                                    <constraint firstAttribute="trailing" secondItem="RKe-UV-AnG" secondAttribute="trailing" id="yaa-kc-lwe"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXV-3Z-WCy">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="4ez-Mb-qgf"/>
+                                </constraints>
                                 <items>
                                     <tabBarItem title="" image="blank-square" id="GxN-cN-Ekw" userLabel="Frame">
-                                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                     </tabBarItem>
                                     <tabBarItem title="" image="location-pin" id="gNm-mb-TsB">
-                                        <inset key="imageInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                     </tabBarItem>
                                     <tabBarItem title="" image="layers" id="Nvd-Ry-brs">
-                                        <inset key="imageInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                     </tabBarItem>
                                     <tabBarItem title="" image="share" id="UV8-2h-vAa">
-                                        <inset key="imageInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                                     </tabBarItem>
                                 </items>
                             </tabBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-bG-3vg">
-                                <rect key="frame" x="0.0" y="458" width="375" height="160"/>
-                                <color key="backgroundColor" white="0.86805555555555558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pB3-8r-pcP">
+                                <rect key="frame" x="0.0" y="468" width="375" height="150"/>
+                                <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="gEJ-LV-smI"/>
+                                    <constraint firstAttribute="height" constant="150" id="Y58-rq-IU5"/>
                                 </constraints>
-                            </view>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tTX-Yn-Qaz">
+                                    <size key="itemSize" width="123" height="123"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QzK-cs-7ca">
+                                        <rect key="frame" x="20" y="13.5" width="123" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DlW-jL-fp5">
+                                        <rect key="frame" x="153" y="13.5" width="123" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p0g-3M-ajF">
+                                        <rect key="frame" x="286" y="13.5" width="123" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qEf-iq-joW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5DJ-HV-AaY"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ugO-bG-3vg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AVq-AN-abw"/>
-                            <constraint firstItem="RKe-UV-AnG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CnE-3o-LT4"/>
+                            <constraint firstItem="pB3-8r-pcP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Y3-UO-ZAU"/>
+                            <constraint firstItem="ZQj-yG-LSP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GNa-QD-BvS"/>
                             <constraint firstItem="hXV-3Z-WCy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L35-3b-ni3"/>
+                            <constraint firstItem="pB3-8r-pcP" firstAttribute="top" secondItem="ZQj-yG-LSP" secondAttribute="bottom" id="O9o-hN-ecD"/>
                             <constraint firstItem="hXV-3Z-WCy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OVN-ET-Gjs"/>
-                            <constraint firstItem="RKe-UV-AnG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TeE-Qq-iR7"/>
-                            <constraint firstItem="hXV-3Z-WCy" firstAttribute="top" secondItem="ugO-bG-3vg" secondAttribute="bottom" id="iSw-2h-EKQ"/>
-                            <constraint firstItem="RKe-UV-AnG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sdm-wz-FFA"/>
-                            <constraint firstItem="ugO-bG-3vg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="skl-BJ-2Z8"/>
+                            <constraint firstItem="pB3-8r-pcP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QNR-nK-bO9"/>
+                            <constraint firstItem="hXV-3Z-WCy" firstAttribute="top" secondItem="pB3-8r-pcP" secondAttribute="bottom" id="gpd-th-ayD"/>
+                            <constraint firstItem="ZQj-yG-LSP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k3Z-ns-TfK"/>
                             <constraint firstItem="hXV-3Z-WCy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yd2-T5-7gR"/>
+                            <constraint firstItem="ZQj-yG-LSP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zk3-Vx-qZS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -73,6 +121,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="d1L-yS-WBv"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionViewFrame" destination="pB3-8r-pcP" id="krP-SF-n40"/>
                         <outlet property="imageToEdit" destination="RKe-UV-AnG" id="2Mx-lC-VKM"/>
                         <outlet property="tabBarEditor" destination="hXV-3Z-WCy" id="hJT-XW-yqE"/>
                     </connections>
@@ -165,10 +214,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blank-square" width="46" height="46"/>
-        <image name="layers" width="46" height="46"/>
-        <image name="location-pin" width="46" height="46"/>
+        <image name="blank-square" width="30" height="30"/>
+        <image name="layers" width="30" height="30"/>
+        <image name="location-pin" width="30" height="30"/>
         <image name="nyamapplogo" width="175" height="52"/>
-        <image name="share" width="46" height="46"/>
+        <image name="share" width="30" height="30"/>
+        <image name="test-photo" width="736" height="1032"/>
     </resources>
 </document>

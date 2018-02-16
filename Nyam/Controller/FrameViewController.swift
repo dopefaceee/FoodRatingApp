@@ -11,55 +11,83 @@ import UIKit
 class FrameViewController: UIViewController {
     
     @IBOutlet weak var imageToEdit: UIImageView!
-    @IBOutlet weak var frame1: UIButton!
+    
+    @IBOutlet weak var tabBarEditor: UITabBar!
+    
+    @IBOutlet weak var collectionViewFrame: UICollectionView!
+   
     var newImage: UIImage!
     
-    @IBOutlet weak var foodNameFrame1: UIButton!
-    @IBOutlet weak var ratingFoodFrame1: UIButton!
-    
-    @IBOutlet weak var foodNameFrame2: UIButton!
-    @IBOutlet weak var bgOverlayFrame2: UIView!
-    
+    let FrameCellId: String = "FrameCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageToEdit.image = newImage
         
-        bgOverlayFrame2.backgroundColor = UIColor(white: 0.05, alpha: 0.5)
+        tabBarEditor.delegate = self
+        collectionViewFrame.delegate = self
+        collectionViewFrame.dataSource = self
+        
+        tabBarEditor.selectedItem = tabBarEditor.items![0]
+        
+        let nibCell = UINib(nibName: FrameCellId, bundle: nil)
+        collectionViewFrame.register(nibCell, forCellWithReuseIdentifier: FrameCellId)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        UIApplication.shared.isStatusBarHidden = true
-        
-        foodNameFrame1.isHidden = true
-        ratingFoodFrame1.isHidden = true
-        
-        foodNameFrame2.isHidden = true
-        bgOverlayFrame2.isHidden = true
+       
     }
 
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
     
-    @IBAction func initiateFrame1(_ sender: Any) {
-        foodNameFrame1.isHidden = false
-        ratingFoodFrame1.isHidden = false
-        
-        foodNameFrame2.isHidden = true
-        bgOverlayFrame2.isHidden = true
-    }
     
-    @IBAction func initiateFrame2(_ sender: Any) {
-        foodNameFrame2.isHidden = false
-        bgOverlayFrame2.isHidden = false
-        
-        foodNameFrame1.isHidden = true
-        ratingFoodFrame1.isHidden = true
-    }
     
 }
+
+extension FrameViewController:  UITabBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+
+        if item == (tabBar.items as! [UITabBarItem])[0] {
+            print("Index 0 is hitted!")
+        }
+        
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionViewFrame.dequeueReusableCell(withReuseIdentifier: FrameCellId, for: indexPath) as? FrameCell
+        cell?.labelFrame.text = "Frame1"
+        
+        return cell!
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

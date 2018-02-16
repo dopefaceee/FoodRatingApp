@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1309F805201E0CA500D03A41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1309F804201E0CA500D03A41 /* AppDelegate.swift */; };
-		1309F807201E0CA500D03A41 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1309F806201E0CA500D03A41 /* CaptureViewController.swift */; };
 		1309F80A201E0CA500D03A41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1309F808201E0CA500D03A41 /* Main.storyboard */; };
 		1309F80C201E0CA500D03A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1309F80B201E0CA500D03A41 /* Assets.xcassets */; };
 		1309F80F201E0CA500D03A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1309F80D201E0CA500D03A41 /* LaunchScreen.storyboard */; };
 		1309F817201E289A00D03A41 /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1309F816201E289A00D03A41 /* FrameViewController.swift */; };
 		13BC6BE22020E62D00A0D085 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC6BE12020E62D00A0D085 /* HomeViewController.swift */; };
+		13DEAFCF2036F427000F953C /* FrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEAFCD2036F427000F953C /* FrameCell.swift */; };
+		13DEAFD02036F427000F953C /* FrameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13DEAFCE2036F427000F953C /* FrameCell.xib */; };
 		BDC9E0AB7432C2BDD6368AE0 /* Pods_Nyam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17860E63AC77A92BFC3BC30E /* Pods_Nyam.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,13 +22,14 @@
 		0B2FFD46C4741A4C1614D415 /* Pods-Nyam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nyam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nyam/Pods-Nyam.release.xcconfig"; sourceTree = "<group>"; };
 		1309F801201E0CA500D03A41 /* Nyam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nyam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1309F804201E0CA500D03A41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1309F806201E0CA500D03A41 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		1309F809201E0CA500D03A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1309F80B201E0CA500D03A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1309F80E201E0CA500D03A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1309F810201E0CA500D03A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1309F816201E289A00D03A41 /* FrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
 		13BC6BE12020E62D00A0D085 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13DEAFCD2036F427000F953C /* FrameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameCell.swift; sourceTree = "<group>"; };
+		13DEAFCE2036F427000F953C /* FrameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrameCell.xib; sourceTree = "<group>"; };
 		17860E63AC77A92BFC3BC30E /* Pods_Nyam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nyam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D590980CF110925C028A59 /* Pods-Nyam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nyam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nyam/Pods-Nyam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 		1309F803201E0CA500D03A41 /* Nyam */ = {
 			isa = PBXGroup;
 			children = (
+				13DEAFBE203547DE000F953C /* View */,
 				1309F818201E2E9600D03A41 /* Controller */,
 				1309F804201E0CA500D03A41 /* AppDelegate.swift */,
 				1309F808201E0CA500D03A41 /* Main.storyboard */,
@@ -79,10 +82,18 @@
 			isa = PBXGroup;
 			children = (
 				1309F816201E289A00D03A41 /* FrameViewController.swift */,
-				1309F806201E0CA500D03A41 /* CaptureViewController.swift */,
 				13BC6BE12020E62D00A0D085 /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		13DEAFBE203547DE000F953C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13DEAFCD2036F427000F953C /* FrameCell.swift */,
+				13DEAFCE2036F427000F953C /* FrameCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E1DAEDB1A4AD067E0C46D19B /* Pods */ = {
@@ -165,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1309F80F201E0CA500D03A41 /* LaunchScreen.storyboard in Resources */,
+				13DEAFD02036F427000F953C /* FrameCell.xib in Resources */,
 				1309F80C201E0CA500D03A41 /* Assets.xcassets in Resources */,
 				1309F80A201E0CA500D03A41 /* Main.storyboard in Resources */,
 			);
@@ -180,11 +192,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Nyam/Pods-Nyam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ASHorizontalScrollView/ASHorizontalScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
 				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASHorizontalScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
 			);
@@ -234,7 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1309F817201E289A00D03A41 /* FrameViewController.swift in Sources */,
-				1309F807201E0CA500D03A41 /* CaptureViewController.swift in Sources */,
+				13DEAFCF2036F427000F953C /* FrameCell.swift in Sources */,
 				1309F805201E0CA500D03A41 /* AppDelegate.swift in Sources */,
 				13BC6BE22020E62D00A0D085 /* HomeViewController.swift in Sources */,
 			);
